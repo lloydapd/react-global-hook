@@ -1,5 +1,5 @@
 {
-  "name": "react-global-hook",
+  "name": "use-hook-global",
   "version": "1.0.0",
   "description": "global hook for state and actions management",
   "main": "index.js",
@@ -7,5 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "gabby",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lloydapd/react-global-hook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lloydapd/react-global-hook/issues"
+  },
+  "homepage": "https://github.com/lloydapd/react-global-hook#readme",
+  "dependencies": {
+    "use-hook-global": "^1.0.0"
+  },
+  "devDependencies": {}
 }

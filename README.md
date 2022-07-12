@@ -11,7 +11,6 @@ Get a state and actions management for your app
 Then...
 
 ...
-
 import React from 'react'
 import { globalhook, request } from 'react-global-hook'
 
