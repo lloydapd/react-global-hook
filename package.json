@@ -1,6 +1,6 @@
 {
   "name": "use-hook-global",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "global hook for state and actions management",
   "main": "index.js",
   "scripts": {
