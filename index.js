@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+var React = require('react')
 
 function setState(store, newState, afterUpdateCallback) {
   store.state = { ...store.state, ...newState };
@@ -16,14 +16,14 @@ function setState(store, newState, afterUpdateCallback) {
 }
 
 function useCustom(store, mapState, mapActions, initState, fields) {
-  const [, originalHook] = useState(initState);
+  const [, originalHook] = React.useState(initState);
   const state = mapState ? mapState(store.state) : store.state;
-  const actions = useMemo(
+  const actions = React.useMemo(
     () => (mapActions ? mapActions(store.actions) : store.actions),
     [mapActions, store.actions]
   )
 
-  useEffect(() => {
+  React.useEffect(() => {
     const newListener = { oldState: {} };
     newListener.id = new Date().getTime()
     newListener.fds = fields || []
@@ -69,4 +69,4 @@ const useStore = (initialState, actions, initializer) => {
   return useCustom.bind(null, store, null, null, initialState)
 }
 
-export default useStore;
+module.exports = useStore

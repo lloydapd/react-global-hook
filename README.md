@@ -1,4 +1,3 @@
-# react-global-hook
 
 # What is this?
 
@@ -6,37 +5,22 @@ Get a state and actions management for your app
 
 # Installation
 
-`npm i react-global-hook --save`
+`npm i hook-use --save`
 
 Then...
 
 ...
-import React from 'react'
-import { globalhook, request } from 'react-global-hook'
+import useStore from 'hook-use'
 
-const initialState = {
-  items: []
-}
+const initialState = { counter: 0 }
 
-const appActions = {
-  setItems: async(store, items) => {
-    await store.setState({ items: items })
-  }
-}
+const actions = { add: (store, value) => { store.setState({ counter: value }) } }
 
-const useGlobal = globalhook(initialState, actions)
+const useGlobal = useStore(initialState, actions) 
 
 function App() {
-  const [state, actions] = useGlobal(['items'])
-
-  function requestAPI() {
-    request(method, API_URL + url, data, headers)
-  }
+  const [state, actions] = useGlobal(['item'])
 
 }
 ...
 
-## Use this
-
-* *globalhook* - requires initialState and actions
-* *request* - request to your rest API

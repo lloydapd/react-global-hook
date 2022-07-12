@@ -1,5 +1,5 @@
 {
-  "name": "use-hook-global",
+  "name": "hook-use",
   "version": "1.1.0",
   "description": "global hook for state and actions management",
   "main": "index.js",
@@ -16,8 +16,5 @@
     "url": "https://github.com/lloydapd/react-global-hook/issues"
   },
   "homepage": "https://github.com/lloydapd/react-global-hook#readme",
-  "dependencies": {
-    "use-hook-global": "^1.0.0"
-  },
   "devDependencies": {}
 }
