@@ -9,7 +9,7 @@ Get a state and actions management for your app
 
 Then...
 
-...
+```
 import useStore from 'hook-use'
 
 const initialState = { counter: 0 }
@@ -22,5 +22,5 @@ function App() {
   const [state, actions] = useGlobal(['item'])
 
 }
-...
+```
 
